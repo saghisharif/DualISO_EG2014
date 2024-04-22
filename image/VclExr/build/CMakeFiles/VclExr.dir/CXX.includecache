@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/saghi/vcl/lib/image/VclExr/VclExr.cpp
+VclExr.h
+/home/saghi/vcl/lib/image/VclExr/VclExr.h
+OpenEXR/ImfInputFile.h
+-
+OpenEXR/ImfOutputFile.h
+-
+OpenEXR/ImfChannelList.h
+-
+OpenEXR/ImfStringAttribute.h
+-
+OpenEXR/ImfFloatAttribute.h
+-
+
+/home/saghi/vcl/lib/image/VclExr/VclExr.h
+string
+-
+opencv2/opencv.hpp
+-
+

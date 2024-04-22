@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home_D/Documents/Dual_ISO_project/release_Eurographics/image/VclExr/VclExr.cpp
+VclExr.h
+/home_D/Documents/Dual_ISO_project/release_Eurographics/image/VclExr/VclExr.h
+OpenEXR/ImfInputFile.h
+-
+OpenEXR/ImfOutputFile.h
+-
+OpenEXR/ImfChannelList.h
+-
+OpenEXR/ImfStringAttribute.h
+-
+OpenEXR/ImfFloatAttribute.h
+-
+
+/home_D/Documents/Dual_ISO_project/release_Eurographics/image/VclExr/VclExr.h
+string
+-
+opencv2/opencv.hpp
+-
+

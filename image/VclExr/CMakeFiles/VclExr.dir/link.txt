@@ -1,0 +1,2 @@
+/usr/bin/ar cr libVclExr.a  CMakeFiles/VclExr.dir/VclExr.cpp.o
+/usr/bin/ranlib libVclExr.a

@@ -1,0 +1,12 @@
+This is a somewhat-modified version of the rawspeed development branch, revision:
+https://github.com/klauspost/rawspeed/commit/a251d0176ae23972974102fadae65dbdd4b26528
+
+The cameras.xml that's included here should be good for quite awhile, but it
+can always be replaced with an updated one from Klaus' branch.
+
+Klaus is a windows programmer.  It's unknown which version of Visual Studio he
+uses, but it's not a recent one since it doesn't know anything about std 
+namespaces, nor does it apparently even need you to include stuff that should
+be.  Precompiled headers maybe?  Ugh.  Anyways, stuff appears to be working now, but
+upgrading will be another couple hours of work if there's a new version of rawspeed 
+you want.

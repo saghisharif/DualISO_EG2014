@@ -1,0 +1,2 @@
+/usr/bin/ar cr libarg.a  CMakeFiles/arg.dir/arg.c.o CMakeFiles/arg.dir/expr.c.o
+/usr/bin/ranlib libarg.a

@@ -1,0 +1,2 @@
+/usr/bin/ar cr libVclMatlab.a  CMakeFiles/VclMatlab.dir/VclMatlab.cpp.o
+/usr/bin/ranlib libVclMatlab.a

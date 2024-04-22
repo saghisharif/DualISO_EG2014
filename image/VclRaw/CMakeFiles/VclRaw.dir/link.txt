@@ -1,0 +1,2 @@
+/usr/bin/ar cr libVclRaw.a  CMakeFiles/VclRaw.dir/VclRaw.cpp.o
+/usr/bin/ranlib libVclRaw.a
