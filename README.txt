@@ -1,5 +1,5 @@
 *************************************************************
-HDR reconstruction for alternating gain (ISO) sensor readout
+HDR reconstruction for alternating gain (ISO) sensor readout - Eurographics Short Paper 2014.
 *************************************************************
 
 DualISO reconstruction project is free software that performs a very robust and sensor noise-aware method on the output of the dualISO image that has been captured with Magic Lantern modification. This software can be used on other types of data for the reconstruction of a single HDR image. For more information please refer to the paper: https://diglib.eg.org/xmlui/handle/10.2312/egsh.20141006.025-028
