@@ -3,7 +3,7 @@
 This repository contains the source code for the HDR reconstruction of images captured with alternating gain (ISO) sensor readout, a technique discussed in the 2014 Eurographics Short Paper. This method is robust, sensor noise-aware, and primarily intended for images processed by the Magic Lantern firmware modification. The tool can also be applied to other types of dual ISO data to reconstruct a single HDR image. For more detailed information, refer to the [Eurographics Short Paper](https://diglib.eg.org/xmlui/handle/10.2312/egsh.20141006.025-028).
 
 ## Developed By
-The Visual Computing Laboratory (VCL) at Linköping University.
+Saghi Hajisharif at the Visual Computing Laboratory (VCL) at Linköping University.
 
 ## Calibration Requirements
 Proper calibration of the camera is crucial for accurate HDR reconstruction. The calibration process involves capturing multiple sets of images under different conditions:
