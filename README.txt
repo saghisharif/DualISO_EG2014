@@ -1,41 +1,59 @@
-*************************************************************
-HDR reconstruction for alternating gain (ISO) sensor readout - Eurographics Short Paper 2014.
-*************************************************************
+# HDR Reconstruction for Alternating Gain (ISO) Sensor Readout
 
-DualISO reconstruction project is free software that performs a very robust and sensor noise-aware method on the output of the dualISO image that has been captured with Magic Lantern modification. This software can be used on other types of data for the reconstruction of a single HDR image. For more information please refer to the paper: https://diglib.eg.org/xmlui/handle/10.2312/egsh.20141006.025-028
+This repository contains the source code for the HDR reconstruction of images captured with alternating gain (ISO) sensor readout, a technique discussed in the 2014 Eurographics Short Paper. This method is robust, sensor noise-aware, and primarily intended for images processed by the Magic Lantern firmware modification. The tool can also be applied to other types of dual ISO data to reconstruct a single HDR image. For more detailed information, refer to the [Eurographics Short Paper](https://diglib.eg.org/xmlui/handle/10.2312/egsh.20141006.025-028).
+
+## Developed By
+The Visual Computing Laboratory (VCL) at Linköping University.
+
+## Calibration Requirements
+Proper calibration of the camera is crucial for accurate HDR reconstruction. The calibration process involves capturing multiple sets of images under different conditions:
+
+1. White (Flat-field) and Black images at ISO 100.
+2. White (Flat-field) and Black images at ISO 1600. Note: If using ISO 100-1600, the higher ISO can be set to any desired value.
+3. White (Flat-field) and Black images with Dual-ISO mode activated on Magic Lantern (ML).
+
+### Additional Notes:
+- Black images should be captured in a dark room with the camera lens capped.
+- White images should be captured with the lens removed or out-of-focus. If using a flat surface, ensure it does not saturate the pixels, which can lead to incorrect calibration data.
+- Capture at least 40 images to ensure precise calibration.
+
+### Calibration Software
+The calibration program, written in Matlab, outputs a `.mat` file used by the main HDR reconstruction program.
+
+## Dependencies
+- **RawSpeed Library**: Modified for compatibility with Linux. [GitHub Repository](https://github.com/klauspost/rawspeed)
+- **OpenCV**
+- **Eigen**
+
+Required configuration file included at `opensource/rawspeed/cameras.xml`.
+
+## Usage
+To run the program, use the following command format:
+./dualiso inputfile.CR2 outputfile.exr cameras.xml Calibration.mat [options]
 
 
-This program has been developed by the Visual Computing Laboratory (VCL) at Linköping University. 
+### Options
+- `-h`: Kernel size (default = 1.2)
+- `-fsizex`: Filter size in x-dimension (default = 11)
+- `-fsizey`: Filter size in y-dimension (default = 11)
+- `-M`: Order of the polynomial (0, 1, or 2; default = 2)
 
-***************************************************************************************
+## Citation
+If you use this tool in your research or wish to refer to the Eurographics short paper, please cite the following:
 
-The program requires careful calibration of the camera, where the following pictures are captured:
 
-1- White (Flat-field) and Black images with ISO 100 
-2- White (Flat-field) and Black images with ISO 1600 (if you are going to use ISO 100-1600, the higher ISO can be set to whatever you wish)
-3- White (Flat-field) and Back images with Dual-ISO mode activated on ML.
+@inproceedings{10.2312:egsh.20141006,
+booktitle = {Eurographics 2014 - Short Papers},
+editor = {Eric Galin and Michael Wand},
+title = {{HDR Reconstruction for Alternating Gain (ISO) Sensor Readout}},
+author = {Hajisharif, Saghi and Kronander, Joel and Unger, Jonas},
+year = {2014},
+publisher = {The Eurographics Association},
+ISSN = {1017-4656},
+DOI = {10.2312/egsh.20141006}
+}
 
-*Note: The Black images are captured in the dark room with the camera lens on.
 
-**Note: The white images are captured either with the lens removed or out-of-focus. If you have a very flat surface that can work too but be careful not to saturate the pixels which will create the wrong calibration data for the camera. 
 
-***Note: The more images you capture, the more accurate the calibration will be. Approximately 40 images or more are required for calibration.
-
-****Note: The calibration program is currently under Matlab and it will save the output as a mat file which can be read by the program.
-
-****************************************************************************************
-Dependencies:
-
--This program is dependent on the rawspeed library. https://github.com/klauspost/rawspeed
-This library has been modified so that it works also under Linux. Based on this the program requires an XML file which has been included in the folder opensource/rawspeed/cameras.xml. 
-
--openCV, Eigen
-
-****************************************************************************************
-How to run the program:
-
-The input arguments: ./dualiso inputfile.CR2 outputfile.exr cameras.xml Calibration.mat 
--h 		kernel size default value = 1.2
--fsizex Filter size x-dim default value = 11
--fsizey Filter size y-dim default value = 11
--M 		Selects the order of the polynomial (0,1,2) default = 2
+## License
+This project is released as free software under the terms specified in the LICENSE file.
