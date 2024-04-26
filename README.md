@@ -41,7 +41,7 @@ To run the program, use the following command format:
 ## Citation
 If you use this tool in your research or wish to refer to the Eurographics short paper, please cite the following:
 
-
+```bibtex
 @inproceedings{10.2312:egsh.20141006,
 booktitle = {Eurographics 2014 - Short Papers},
 editor = {Eric Galin and Michael Wand},
